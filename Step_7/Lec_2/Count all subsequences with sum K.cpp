@@ -3,26 +3,25 @@ class Solution {
     
       // recursion won't work here due to constraint of arr size
       
-      // void recursion(vector<int> &nums, int n, int idx, int &ans, int sum, int &target){
+      // int recursion(vector<int> &nums, int n, int idx, int sum, int &target){
           
       //     if(idx == n){
-      //         if(sum == target) ans++;
-      //         return;
+      //         if(sum == target) return 1;
+      //         return 0;
       //     }
   
-      //     recursion(nums, n, idx + 1, ans, sum + nums[idx], target);
+      //     int l = recursion(nums, n, idx + 1, sum + nums[idx], target);
   
-      //     recursion(nums, n, idx + 1, ans, sum, target);
+      //     int r = recursion(nums, n, idx + 1, sum, target);
+          
+      //     return l+r;
       // }
       
       // int perfectSum(vector<int>& nums, int target) {
       //     // code here
-      //     int ans = 0;
       //     int n = nums.size();
   
-      //     recursion(nums, n, 0, ans, 0, target);
-  
-      //     return ans;
+      //     return recursion(nums, n, 0, 0, target);
       // }
       
       int perfectSum(vector<int>& nums, int target) {
@@ -43,3 +42,4 @@ class Solution {
           return dp[n][target];
       }
   };
+  
